@@ -51,7 +51,10 @@ class Handler extends ExceptionHandler
     {
         if($exception instanceof NotFoundHttpException){
             return $this->failResponse(null,['Not Found'],404);
+        }else if($exception instanceof \UnexpectedValueException){
+            return $this->failResponse(null,['Something Went Wrong'],500);
         }
+
         return parent::render($request, $exception);
     }
 }

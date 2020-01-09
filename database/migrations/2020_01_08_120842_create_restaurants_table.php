@@ -24,8 +24,8 @@ class CreateRestaurantsTable extends Migration
             $table->string('housenumber')->nullable();
             $table->string('postcode')->nullable();
             $table->string('city');
-            $table->double('latitude')->nullable();
-            $table->double('longitude')->nullable();
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
             $table->string('url');
             $table->tinyInteger('open');
             $table->integer('bestMatch');
