@@ -18,7 +18,7 @@ trait ResponseTrait
     public function successResponse($data = null,$message = ['Success'],$status=200,$custom_code = false)
     {
         return response()->json([
-            'status' => $custom_code ?? $status,
+            'status' => $custom_code ?: $status,
             'message' => $message,
             'data' => $data,
         ],$status);
